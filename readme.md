@@ -1,4 +1,4 @@
-<p align="center"><b style="font-size: 100px;">Tour Management system</b></p>
+<p align="center"><strong>Tour Management system</strong></p>
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 
