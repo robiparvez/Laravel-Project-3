@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateToperatorsTable extends Migration
 {
@@ -13,8 +13,15 @@ class CreateToperatorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('toperators', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('toperators', function (Blueprint $table)
+        {
+            $table->increments('id')->unsigned();
+
+            $table->string('name', 20);
+            $table->string('password', 8);
+            $table->text('address');
+            $table->text('logo');
+
             $table->timestamps();
         });
     }

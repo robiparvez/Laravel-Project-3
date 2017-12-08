@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateToursTable extends Migration
 {
@@ -13,8 +13,16 @@ class CreateToursTable extends Migration
      */
     public function up()
     {
-        Schema::create('tours', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('tours', function (Blueprint $table)
+        {
+            $table->increments('id')->unsigned();
+
+            $table->text('name');
+            $table->text('description');
+            $table->text('address');
+            $table->double('phone',11);
+            $table->text('image');
+
             $table->timestamps();
         });
     }
